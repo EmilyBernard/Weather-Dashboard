@@ -16,3 +16,42 @@
       font-family: 'Tilt Warp';
       background-color: #0c7a98 ;
     }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  aside {
+    flex: 1;
+    padding: 20px;
+  }
+  .container {
+    border-radius: 10rem;
+    border: #f0f6f7;
+  }  
+  .icon {
+    size: 100%;
+  }
+  section {
+    flex: 3;
+    padding: 20px;
+  }
+  .card {
+    background-color: #0c7a98; 
+    padding: .5%;
+    margin: .5%;
+  }
+
+  @media screen and (max-width: 768px) {
+  
+    main,
+    aside {
+      order: 1;
+      flex-direction: column;
+    }
+    section {
+      order: 2;
+      flex-direction: column;
+    }
+
+  }

@@ -1,4 +1,4 @@
-var searchButton = document.querySelector("#submit");
+var searchButton = document.querySelector(".submit");
 
 var APIKey = "ad431daf2b902fd2d8a3b4c76d3a4c0f"
 
@@ -8,7 +8,7 @@ function handleFormSubmit(event) {
     if (userInput) {
       getAllWeather(city)
     }
-  }
+  
 
 function getAllWeather(city) {
  
@@ -24,8 +24,18 @@ function getAllWeather(city) {
 
 
 
+  var getFiveDayForecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&units=imperial&appid=" + apiKey2;
+  fetch(getFiveDayForecastURL)
+    .then(function (response) {
+      return response.json()
+    })
+    .then(function (data) {
+      console.log(data);
+      displayFiveDayForecast(data);
+    })
 
-  document.querySelector(".search button").addEventListener('click', function(){
-    getAllWeather.search();
 
-  });
+}
+
+
+searchButton.addEventListener("click", handleFormSubmit);

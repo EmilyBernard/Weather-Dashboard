@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    background-image: url("cloudsVert.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Tilt warp';
+  } 
+  
+  .jumbotron-fluid {
+      font-weight: bold;
+      color: #f0f6f7;
+      font-family: 'Tilt Warp';
+      background-color: #0c7a98 ;
+    }
